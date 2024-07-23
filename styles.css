@@ -4,3 +4,9 @@ body {
     place-content: center;
     place-items: center;
 }
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5px;
+}
