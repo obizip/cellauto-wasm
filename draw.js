@@ -9,8 +9,8 @@ function to_svg(data, stride, rectSize) {
     svg.setAttribute("width", svgWidth);
     svg.setAttribute("height", svgHeight);
 
-    for (row = 0; row < stride; row++) {
-        for (col = 0; col < stride; col++) {
+    for (let row = 0; row < stride; row++) {
+        for (let col = 0; col < stride; col++) {
             if (data[row * stride + col] === 0) continue;
 
             const rect = document.createElementNS(svgNamespace, "rect");
@@ -30,18 +30,7 @@ function to_svg(data, stride, rectSize) {
     return svg
 }
 
-function calc_cellauto(stride) {
-    const data = [
-        1, 1, 0, 1, 1,
-        1, 0, 1, 0, 0,
-        0, 0, 0, 1, 0,
-        1, 0, 0, 0, 1,
-        1, 0, 0, 0, 1
-    ];
-    return data
-}
-
-function downloadSVG() {
+window.downloadSVG = () => {
     const serializer = new XMLSerializer();
     const svgContainer = document.getElementById("svgContainer");
     const svg = svgContainer.querySelector("svg");
@@ -56,8 +45,8 @@ function downloadSVG() {
     document.body.removeChild(downloadLink);
 }
 
-function generateSVG() {
-    svgContainer = document.getElementById("svgContainer")
+window.generateSVG = () => {
+    const svgContainer = document.getElementById("svgContainer")
     const old_svg = svgContainer.querySelector("svg")
     if (old_svg !== null) {
         svgContainer.removeChild(old_svg)
