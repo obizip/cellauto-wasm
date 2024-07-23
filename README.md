@@ -1,6 +1,6 @@
-# cellauto-wasm
+# :construction: **Work In Progress**
 
-**Work In Progress**
+# cellauto-wasm
 
 A Cellular Automaton implemented with WebAssembly (WASM).
 
