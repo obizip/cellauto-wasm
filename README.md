@@ -30,7 +30,9 @@ Check the current status: [Live Demo](https://www.obizip.jp/cellauto-wasm)
     ```bash
     make
     ```
-    > [!NOTE]
-    > You can built without make:
-    > ```cd cellauto && wasm-pack build --target web```
+    
+> [!NOTE]
+> You can built without make:
+> ```cd cellauto && wasm-pack build --target web```
+
 4. You can serve the built project
