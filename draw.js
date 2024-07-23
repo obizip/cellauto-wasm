@@ -52,9 +52,10 @@ window.generateSVG = () => {
         svgContainer.removeChild(old_svg);
     }
 
-    const stride = parseInt(document.getElementById("stride").value)
-    const rectSize = parseInt(document.getElementById("rectSize").value)
-    const data = calc_cellauto(stride)
+    const rule = parseInt(document.getElementById("rule").value);
+    const stride = parseInt(document.getElementById("stride").value);
+    const rectSize = parseInt(document.getElementById("rectSize").value);
+    const data = calc_cellauto(rule, stride);
     const svg = to_svg(data, stride, rectSize);
 
     document.getElementById("svgContainer").appendChild(svg);

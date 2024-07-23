@@ -9,8 +9,9 @@
 </head>
 
 <body>
-    <input type="number" id="stride" value="5" min="1" required>
-    <input type="number" id="rectSize" value="50" min="1" required>
+    <input type="number" id="rule" value="30" min="1" placeholder="rule" required>
+    <input type="number" id="stride" value="500" min="1" placeholder="stride" required>
+    <input type="number" id="rectSize" value="1" min="1" placeholder="rectSize" required>
     <button id="generateBtn" onclick="generateSVG()">Generate</button>
     <button id="downloadBtn" onclick="downloadSVG()">Download</button>
     <div id="svgContainer"></div>
