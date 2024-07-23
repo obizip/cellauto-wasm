@@ -1,9 +1,5 @@
 let wasm;
 
-function _assertNum(n) {
-    if (typeof(n) !== 'number') throw new Error(`expected a number argument, found ${typeof(n)}`);
-}
-
 let cachedInt32Memory0 = null;
 
 function getInt32Memory0() {
@@ -35,9 +31,6 @@ function getArrayU32FromWasm0(ptr, len) {
 export function calc_cellauto(rule, width, height) {
     try {
         const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-        _assertNum(rule);
-        _assertNum(width);
-        _assertNum(height);
         wasm.calc_cellauto(retptr, rule, width, height);
         var r0 = getInt32Memory0()[retptr / 4 + 0];
         var r1 = getInt32Memory0()[retptr / 4 + 1];
