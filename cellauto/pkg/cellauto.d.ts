@@ -2,16 +2,17 @@
 /* eslint-disable */
 /**
 * @param {number} rule
-* @param {number} stride
+* @param {number} width
+* @param {number} height
 * @returns {Uint32Array}
 */
-export function calc_cellauto(rule: number, stride: number): Uint32Array;
+export function calc_cellauto(rule: number, width: number, height: number): Uint32Array;
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
 
 export interface InitOutput {
   readonly memory: WebAssembly.Memory;
-  readonly calc_cellauto: (a: number, b: number, c: number) => void;
+  readonly calc_cellauto: (a: number, b: number, c: number, d: number) => void;
   readonly __wbindgen_add_to_stack_pointer: (a: number) => number;
   readonly __wbindgen_free: (a: number, b: number, c: number) => void;
 }

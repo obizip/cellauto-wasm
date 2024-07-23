@@ -28,15 +28,17 @@ function getArrayU32FromWasm0(ptr, len) {
 }
 /**
 * @param {number} rule
-* @param {number} stride
+* @param {number} width
+* @param {number} height
 * @returns {Uint32Array}
 */
-export function calc_cellauto(rule, stride) {
+export function calc_cellauto(rule, width, height) {
     try {
         const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
         _assertNum(rule);
-        _assertNum(stride);
-        wasm.calc_cellauto(retptr, rule, stride);
+        _assertNum(width);
+        _assertNum(height);
+        wasm.calc_cellauto(retptr, rule, width, height);
         var r0 = getInt32Memory0()[retptr / 4 + 0];
         var r1 = getInt32Memory0()[retptr / 4 + 1];
         var v1 = getArrayU32FromWasm0(r0, r1).slice();
