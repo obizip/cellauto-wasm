@@ -9,12 +9,21 @@
 </head>
 
 <body>
-    <p>rule</p>
-    <input type="number" id="rule" value="30" min="1" placeholder="rule" required>
-    <p>stride</p>
-    <input type="number" id="stride" value="500" min="1" placeholder="stride" required>
-    <p>rectangle size</p>
-    <input type="number" id="rectSize" value="1" min="1" placeholder="rectSize" required>
+    <h1>Cellular Automaton</h1>
+    <form>
+        <label>rule:</label>
+        <input type="number" id="rule" value="90" min="1" placeholder="rule" required>
+
+        <label>width: </label>
+        <input type="number" id="width" value="500" min="1" placeholder="width" required>
+
+        <label>height: </label>
+        <input type="number" id="height" value="500" min="1" placeholder="height" required>
+
+        <label>rectangle size: </label>
+        <input type="number" id="rectSize" value="1" min="1" placeholder="rectSize" required>
+    </form>
+
     <button id="generateBtn" onclick="generateSVG()">Generate</button>
     <button id="downloadBtn" onclick="downloadSVG()">Download</button>
     <div id="svgContainer"></div>
