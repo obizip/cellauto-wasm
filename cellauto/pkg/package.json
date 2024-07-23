@@ -1,0 +1,15 @@
+{
+  "name": "cellauto",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "cellauto_bg.wasm",
+    "cellauto.js",
+    "cellauto.d.ts"
+  ],
+  "main": "cellauto.js",
+  "types": "cellauto.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
