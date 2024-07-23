@@ -1,3 +1,5 @@
+import init, { calc_cellauto } from "./cellauto/pkg/cellauto.js";
+
 function to_svg(data, stride, rectSize) {
     const svgWidth = stride * rectSize;
     const svgHeight = stride * rectSize;
@@ -68,3 +70,5 @@ function generateSVG() {
 
     document.getElementById("svgContainer").appendChild(svg);
 }
+
+await init();
