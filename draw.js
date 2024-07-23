@@ -46,10 +46,10 @@ window.downloadSVG = () => {
 }
 
 window.generateSVG = () => {
-    const svgContainer = document.getElementById("svgContainer")
-    const old_svg = svgContainer.querySelector("svg")
+    const svgContainer = document.getElementById("svgContainer");
+    const old_svg = svgContainer.querySelector("svg");
     if (old_svg !== null) {
-        svgContainer.removeChild(old_svg)
+        svgContainer.removeChild(old_svg);
     }
 
     const stride = parseInt(document.getElementById("stride").value)
